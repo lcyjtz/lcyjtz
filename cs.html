@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cs</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="cube">
+            <div class="out_front">
+                <img src="./img/77597977_p0.jpg" class="pic">
+            </div>
+            <div class="out_back">
+                <img src="./img/77621862_p0.jpg" class="pic">
+            </div>
+            <div class="out_left">
+                <img src="./img/78191926_p0.jpg" class="pic">
+            </div>
+            <div class="out_right">
+                <img src="./img/79377679_p0.jpg" class="pic">
+            </div>
+            <div class="out_top">
+                <img src="./img/78191926_p2.jpg" class="pic">
+            </div>
+            <div class="out_bottom">
+                <img src="./img/78191926_p3.jpg" class="pic">
+            </div>
+            <span class="in_front">
+                <img src="./img/78191926_p3.jpg" class="in_pic">
+            </span>
+            <span class="in_back">
+                <img src="./img/78191926_p2.jpg" class="in_pic">
+            </span>
+            <span class="in_left">
+                <img src="./img/79377679_p0.jpg" class="in_pic">
+            </span>
+            <span class="in_right">
+                <img src="./img/78191926_p3.jpg" class="in_pic">
+            </span>
+            <span class="in_top">
+                <img src="./img/77621862_p0.jpg" class="in_pic">
+            </span>
+            <span class="in_bottom">
+                <img src="./img/77597977_p0.jpg" class="in_pic">
+            </span>
+        </div>
+        <style>
+            .wrap {
+                width: 100px;
+                height: 100px;
+                margin: 100px;
+                position: relative;
+            }
+            
+            .cube {
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                transform-style: preserve-3d;
+                animation: rotate linear 20s infinite;
+            }
+            
+            .cube div {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                opacity: 0.8;
+                transition: all .4s;
+            }
+            
+            .pic {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .cube .out_front {
+                transform: rotateY(0deg) translateZ(90px);
+            }
+            
+            .cube .out_back {
+                transform: rotateY(180deg) translateZ(90px);
+            }
+            
+            .cube .out_left {
+                transform: rotateY(-90deg) translateZ(90px);
+            }
+            
+            .cube .out_right {
+                transform: rotateY(90deg) translateZ(90px);
+            }
+            
+            .cube .out_top {
+                transform: rotateX(90deg) translateZ(90px);
+            }
+            
+            .cube .out_bottom {
+                transform: rotateX(-90deg) translateZ(90px);
+            }
+            
+            .cube span {
+                display: block;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+            
+            .cube .in_pic {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .cube .in_front {
+                transform: rotateY(0deg) translateZ(25px);
+            }
+            
+            .cube .in_back {
+                transform: rotateY(180deg) translateZ(25px);
+            }
+            
+            .cube .in_left {
+                transform: rotateY(-90deg) translateZ(25px);
+            }
+            
+            .cube .in_right {
+                transform: rotateY(90deg) translateZ(25px);
+            }
+            
+            .cube .in_top {
+                transform: rotateX(90deg) translateZ(25px);
+            }
+            
+            .cube .in_bottom {
+                transform: rotateX(-90deg) translateZ(25px);
+            }
+            
+            .cube:hover .out_front {
+                transform: rotateY(0deg) translateZ(160px);
+            }
+            
+            .cube:hover .out_back {
+                transform: rotateY(180deg)translateZ(160px);
+            }
+            
+            .cube:hover .out_left {
+                transform: rotateY(-90deg) translateZ(160px);
+            }
+            
+            .cube:hover .out_right {
+                transform: rotateY(90deg) translateZ(160px);
+            }
+            
+            .cube:hover .out_top {
+                transform: rotateX(90deg) translateZ(160px);
+            }
+            
+            .cube:hover .out_bottom {
+                transform: rotateX(-90deg) translateZ(160px);
+            }
+            
+            @keyframes rotate {
+                from {
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
+                to {
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
+            
+            @-webkit-keyframes rotate {
+                from {
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
+                to {
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
+            
+            @-o-keyframes rotate {
+                from {
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
+                to {
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
+        </style>
+    </div>
+</body>
+
+</html>

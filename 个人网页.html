@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>绿辉的个人博客</title>
+    <link rel="shortcut icon" href="img/11111.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/backStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/tab.css" />
+    <link rel="stylesheet" type="text/css" href="css/button.css" />
+    <link rel="stylesheet" type="text/css" href="css/boxsstyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/textbackgrame.css" />
+    <link rel="stylesheet" type="text/css" href="assets/waifu.min.css?v=1.4.2" />
+</head>
+<style>
+    @font-face {
+        font-family: '个性宅';
+        src: url('font/个性宅.ttf');
+    }
+    
+    @font-face {
+        font-family: '朝忆梨花暮忆雪';
+        src: url('font/朝忆梨花暮忆雪.ttf');
+    }
+</style>
+
+<body style="font-family:'朝忆梨花暮忆雪'; margin: 0 auto;">
+    <code><pre>
+    </pre></code>
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
+    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
+    <script src="js/jquery.ckLine.js"></script>
+    <!--Live2D-->
+    <div class="waifu" style="z-index: 99 ;">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+    <!--特效盒子-->
+    <div class="wrap">
+        <div class="cube">
+            <div class="out_front">
+                <img src="./img/77597977_p0.jpg" class="pic">
+            </div>
+            <div class="out_back">
+                <img src="./img/77621862_p0.jpg" class="pic">
+            </div>
+            <div class="out_left">
+                <img src="./img/78191926_p0.jpg" class="pic">
+            </div>
+            <div class="out_right">
+                <img src="./img/79377679_p0.jpg" class="pic">
+            </div>
+            <div class="out_top">
+                <img src="./img/78191926_p2.jpg" class="pic">
+            </div>
+            <div class="out_bottom">
+                <img src="./img/78191926_p3.jpg" class="pic">
+            </div>
+            <span class="in_front">
+            <img src="./img/78191926_p3.jpg" class="in_pic">
+        </span>
+            <span class="in_back">
+            <img src="./img/78191926_p2.jpg" class="in_pic">
+        </span>
+            <span class="in_left">
+            <img src="./img/79377679_p0.jpg" class="in_pic">
+        </span>
+            <span class="in_right">
+            <img src="./img/78191926_p3.jpg" class="in_pic">
+        </span>
+            <span class="in_top">
+            <img src="./img/77621862_p0.jpg" class="in_pic">
+        </span>
+            <span class="in_bottom">
+            <img src="./img/77597977_p0.jpg" class="in_pic">
+        </span>
+        </div>
+    </div>
+    <!--背景波动-->
+    <div class="waveWrapper waveAnimation" style="z-index: -1;">
+        <div class="waveWrapperInner bgTop">
+            <div class="wave waveTop" style="background-image: url('img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url('img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('img/wave-bot.png')"></div>
+        </div>
+    </div>
+    <!--text time-->
+    <div id="peopletext"><label id="time"></label><br>绿辉的个人博客
+    </div>
+    <div class="arrow"></div>
+    <!--主要内容-->
+    <div id="content" style="margin-top: 3vh;">
+        <div id="textContent">
+            <div id="mainpart" style=" position: absolute;">
+                <svg id="ckLine" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"></svg>
+            </div>
+            <section class="wrapper">
+                <ul class="tabs">
+                    <li class="active">文章</li>
+                    <li>视频</li>
+                    <li>博主的个人信息</li>
+                </ul>
+                <ul class="tab__content">
+                    <li class="active">
+                        <div class="content__wrapper">
+                            <h2 class="text-color">文章</h2>
+                            <ul class="colors">
+                                <li data-color="#2ecc71"></li>
+                                <li data-color="#D64A4B"></li>
+                                <li data-color="#8e44ad"></li>
+                                <li class="active-color" data-color="#46a1de"></li>
+                                <li data-color="#bdc3c7"></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <h2 class="text-color">视频</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <h2 class="text-color">博主的个人信息</h2>
+                            <p>Created by <a class="text-color" href="#">Lewi Hussey</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!--尾页-->
+            <div id="ContentTail" style="font-family:'个性宅';">
+                <label>感谢来到我的个人博客，博客的最终解释权归绿辉zzZ所有，如遇到任何问题以及转载，请通过QQ或者E-mail联系我。</label><br>
+                <label>QQ：1242306431、E-mail：lhyjtz@qq.com</label>
+            </div>
+        </div>
+        <div class=""></div>
+    </div>
+    <script type="text/javascript ">
+        initModel("assets/ ")
+    </script>
+
+    <script type="text/javascript ">
+        $('#ckLine').ckLine({
+            leftRight: false,
+            strokeColor: 'rgba(255,255,255,0.4)',
+            interval: 800,
+            animateTime: 1600,
+            animationTimeRange: [800, 1600]
+        });
+    </script>
+    <script src="js/item.js"></script>
+    <script src="assets/waifu-tips.min.js?v=1.4.2 "></script>
+    <script src="assets/live2d.min.js?v=1.0.5 "></script>
+    <script type="text/javascript ">
+        /* 可直接修改部分参数 */
+        live2d_settings['modelId'] = 1; // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 87; // 默认材质 ID
+        live2d_settings['modelStorage'] = false; // 不储存模型 ID
+        live2d_settings['canCloseLive2d'] = false; // 隐藏 关闭看板娘 按钮
+        live2d_settings['canTurnToHomePage'] = false; // 隐藏 返回首页 按钮
+        live2d_settings['waifuSize'] = '280x250'; // 看板娘大小
+        live2d_settings['waifuTipsSize'] = '250x45'; // 提示框大小
+        live2d_settings['waifuFontSize'] = '12px'; // 提示框字体
+        live2d_settings['waifuToolFont'] = '14px'; // 工具栏字体
+        live2d_settings['waifuToolLine'] = '30px'; // 工具栏行高
+        live2d_settings['waifuToolTop'] = '-60px'; // 工具栏顶部边距
+        live2d_settings['waifuDraggable'] = 'axis-x'; // 拖拽样式
+        /* 在 initModel 前添加 */
+        initModel("assets/waifu-tips.json?v=1.4.2 ")
+    </script>
+</body>
+
+</html>
