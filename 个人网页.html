@@ -99,7 +99,8 @@
         </div>
     </div>
     <!--text time-->
-    <div id="peopletext"><label id="time"></label><br>绿辉的个人博客
+    <div id="peopletext">
+        <label id="time"></label><br><label class="pagemain">绿辉的个人博客</label>
     </div>
     <div class="arrow"></div>
     <!--主要内容-->
@@ -119,13 +120,6 @@
                     <li class="active">
                         <div class="content__wrapper">
                             <h2 class="text-color">文章</h2>
-                            <ul class="colors">
-                                <li data-color="#2ecc71"></li>
-                                <li data-color="#D64A4B"></li>
-                                <li data-color="#8e44ad"></li>
-                                <li class="active-color" data-color="#46a1de"></li>
-                                <li data-color="#bdc3c7"></li>
-                            </ul>
                         </div>
                     </li>
                     <li>
@@ -141,13 +135,24 @@
                     </li>
                     <li>
                         <div class="content__wrapper">
-                            <div><img src="#"></div>
-                            <h2 class="text-color">博主的个人信息</h2>
-                            <p>Created by <a class="text-color" href="#">Lewi Hussey</a></p>
+                            <div><img src="#">
+                                <h2 class="text-color">博主的个人信息</h2>
+                                <p>Created by <a class="text-color" href="#">Lewi Hussey</a></p>
+                            </div>
+
                         </div>
                     </li>
                 </ul>
             </section>
+            <div style="position: relative; float: right; width: 15vw;">
+                <ul class="colors" style="float:left">
+                    <li data-color="#2ecc71 "></li>
+                    <li data-color="#D64A4B "></li>
+                    <li data-color="#8e44ad "></li>
+                    <li class="active-color " data-color="#46a1de"></li>
+                    <li data-color="#bdc3c7 "></li>
+                </ul>
+            </div>
             <!--尾页-->
             <div id="ContentTail" style="font-family:'个性宅';">
                 <label>感谢来到我的个人博客，博客的最终解释权归绿辉zzZ以及落宸zzZ所有，如遇到任何问题以及转载，请通过QQ或者E-mail联系我。</label><br>
@@ -156,6 +161,7 @@
         </div>
         <div class=""></div>
     </div>
+
     <script type="text/javascript ">
         initModel("assets/ ")
     </script>
@@ -169,11 +175,10 @@
             animationTimeRange: [800, 1600]
         });
     </script>
-    <script src="js/item.js"></script>
+    <script src="js/item.js "></script>
     <script src="assets/waifu-tips.min.js?v=1.4.2 "></script>
     <script src="assets/live2d.min.js?v=1.0.5 "></script>
     <script type="text/javascript ">
-        /* 可直接修改部分参数 */
         live2d_settings['modelId'] = 1; // 默认模型 ID
         live2d_settings['modelTexturesId'] = 87; // 默认材质 ID
         live2d_settings['modelStorage'] = false; // 不储存模型 ID
@@ -181,12 +186,11 @@
         live2d_settings['canTurnToHomePage'] = false; // 隐藏 返回首页 按钮
         live2d_settings['waifuSize'] = '280x250'; // 看板娘大小
         live2d_settings['waifuTipsSize'] = '250x45'; // 提示框大小
-        live2d_settings['waifuFontSize'] = '12px'; // 提示框字体
+        live2d_settings['waifuFontSize'] = '14px'; // 提示框字体
         live2d_settings['waifuToolFont'] = '14px'; // 工具栏字体
         live2d_settings['waifuToolLine'] = '30px'; // 工具栏行高
         live2d_settings['waifuToolTop'] = '-60px'; // 工具栏顶部边距
         live2d_settings['waifuDraggable'] = 'axis-x'; // 拖拽样式
-        /* 在 initModel 前添加 */
         initModel("assets/waifu-tips.json?v=1.4.2 ")
     </script>
 </body>

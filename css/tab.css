@@ -117,7 +117,6 @@ footer {
 }
 
 .colors {
-    text-align: center;
     padding-top: 20px;
 }
 
@@ -127,8 +126,8 @@ footer {
     height: 50px;
     border-radius: 50%;
     border-bottom: 5px solid rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    margin: 0 10px;
+    display: block;
+    margin: 20px 0;
     cursor: pointer;
     transition-duration: .2s;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
