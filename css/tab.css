@@ -118,16 +118,18 @@ footer {
 
 .colors {
     padding-top: 20px;
+    float: right;
+    margin-right: 14vw;
 }
 
 .colors>li {
     list-style: none;
-    width: 50px;
-    height: 50px;
+    display: block;
+    width: 2vw;
+    height: 2vw;
     border-radius: 50%;
     border-bottom: 5px solid rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 20px 0;
+    margin: 1vw 5px;
     cursor: pointer;
     transition-duration: .2s;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
@@ -144,7 +146,7 @@ footer {
     -webkit-transform: scale(1.2) translateY(-10px);
     transform: scale(1.2) translateY(-10px);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    border-bottom: 20px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1vw solid rgba(0, 0, 0, 0.15);
 }
 
 .colors>li:nth-child(1) {
