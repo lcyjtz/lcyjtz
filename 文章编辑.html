@@ -13,11 +13,12 @@
 <body>
     <div style="font-size: 20px;height: 30px; text-align: center;color: #009689; font-weight: bold;">Markdown文章在线编辑</div>
     <div id="area">
+        <form action="" method="POST" style="width: auto;height: auto;"></form>
         <table>
             <tr>
                 <td><textarea name="" id="md-area" onkeyup=mdSwitch()></textarea></td>
                 <td>
-                    <div id="show-area" class="clearfix"></div>
+                    <div id="show-area" class="clearfix" name="txtcontext"></div>
                 </td>
             </tr>
             <tr>
@@ -25,6 +26,7 @@
                 <td style="float: right;"><input type="submit" value="确定"></td>
             </tr>
         </table>
+        </form>
     </div>
 </body>
 
