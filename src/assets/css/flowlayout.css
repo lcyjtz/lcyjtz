@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+    column-count: 4;
+    font-family: '朝忆梨花暮忆雪';
+}
+
+.container .item {
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    break-inside: avoid;
+    border: 1px solid #ccc;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item h2 {
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.item {
+    padding: 0 0 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        column-count: 3;
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        padding: 20px 20px 20px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        column-count: 1;
+    }
+}

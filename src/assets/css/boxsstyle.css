@@ -1,0 +1,147 @@
+.wrap {
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+    position: fixed;
+    z-index: 99;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: rotate linear 20s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@-o-keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.cube div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+    transition: all .4s;
+}
+
+.pic {
+    width: 150px;
+    height: 150px;
+}
+
+.cube .out_front {
+    transform: rotateY(0deg) translateZ(90px);
+}
+
+.cube .out_back {
+    transform: rotateY(180deg) translateZ(90px);
+}
+
+.cube .out_left {
+    transform: rotateY(-90deg) translateZ(90px);
+}
+
+.cube .out_right {
+    transform: rotateY(90deg) translateZ(90px);
+}
+
+.cube .out_top {
+    transform: rotateX(90deg) translateZ(90px);
+}
+
+.cube .out_bottom {
+    transform: rotateX(-90deg) translateZ(90px);
+}
+
+.cube span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.cube .in_pic {
+    width: 50px;
+    height: 50px;
+}
+
+.cube .in_front {
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+.cube .in_back {
+    transform: rotateY(180deg) translateZ(25px);
+}
+
+.cube .in_left {
+    transform: rotateY(-90deg) translateZ(25px);
+}
+
+.cube .in_right {
+    transform: rotateY(90deg) translateZ(25px);
+}
+
+.cube .in_top {
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.cube .in_bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+}
+
+.cube:hover .out_front {
+    transform: rotateY(0deg) translateZ(160px);
+}
+
+.cube:hover .out_back {
+    transform: rotateY(180deg)translateZ(160px);
+}
+
+.cube:hover .out_left {
+    transform: rotateY(-90deg) translateZ(160px);
+}
+
+.cube:hover .out_right {
+    transform: rotateY(90deg) translateZ(160px);
+}
+
+.cube:hover .out_top {
+    transform: rotateX(90deg) translateZ(160px);
+}
+
+.cube:hover .out_bottom {
+    transform: rotateX(-90deg) translateZ(160px);
+}
+
+@media screen and (max-width: 1000px) {
+    .wrap {
+        display: none;
+    }
+}
