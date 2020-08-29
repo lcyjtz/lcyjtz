@@ -3,8 +3,11 @@ import Home from '../views/HomePage.vue'
 
 const routes = [{
         path: '/',
-        name: 'Home',
-        component: Home
+        component: Home,
+        meta: {
+            title: '首页',
+            requireAuth: true
+        }
     },
     {
         path: '/about',
