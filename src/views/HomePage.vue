@@ -1,10 +1,10 @@
 <template>
     <div>11112</div>
 </template>
-<style scoped lang="less">
+<style scoped >
 body,html{
      width: 100%;
-     height: auto;
+    
 }
 @import "../assets/css/articleeditor.css";
 @import "../assets/css/backStyle.css";
@@ -17,13 +17,12 @@ body,html{
 </style>
 <script>
 import "../assets/js/article.js"
-import "../assets/js/item.js"
-import "../assets/js/jquery.ckLine.js"
+// import "../assets/js/item.js"
+// import "../assets/js/jquery.ckLine.js"
 import { onMounted } from 'vue'
 export default {
     setup(){
         onMounted(()=>{
-            
         })
     }
 }
