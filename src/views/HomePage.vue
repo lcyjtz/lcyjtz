@@ -16,7 +16,7 @@ body,html{
 @import "../assets/css/textbackgrame.css";
 </style>
 <script>
-import "../assets/js/article.js"
+//import "../assets/js/article.js"
 // import "../assets/js/item.js"
 // import "../assets/js/jquery.ckLine.js"
 import { onMounted } from 'vue'
