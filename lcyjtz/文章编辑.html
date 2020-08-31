@@ -1,33 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <title>文章在线编辑</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
-    <script src="js/article.js "></script>
-    <link rel="stylesheet" type="text/css" href="css/articleeditor.css" />
+    <title>MarkDown</title>
+    <!--适配手机-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--使用bootstrap的样式，比较好看-->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: '个性宅';
+            src: url('font/个性宅.ttf');
+        }
+        
+        @font-face {
+            font-family: '朝忆梨花暮忆雪';
+            src: url('font/朝忆梨花暮忆雪.ttf');
+        }
+        
+        h1 {
+            font-family: Consolas, monaco, monospace;
+            font-size: 23px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 23px;
+        }
+        
+        h3 {
+            font-family: Consolas, monaco, monospace;
+            font-size: 17px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 23px;
+        }
+        
+        p {
+            font-family: Consolas, monaco, monospace;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 23px;
+        }
+        
+        blockquote {
+            font-family: Consolas, monaco, monospace;
+            font-size: 17px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 23px;
+        }
+        
+        pre {
+            font-family: Consolas, monaco, monospace;
+            font-size: 12px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 23px;
+        }
+        
+        #text-input {
+            margin-left: 6%;
+            height: 90vh;
+            padding: 15px;
+            width: 96%;
+            border: none;
+            resize: none;
+        }
+        
+        #preview {
+            width: 96%;
+            padding: 15px;
+            border: none;
+            height: 90vh;
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+        
+        .row {
+            width: 96vw;
+            height: 90vh;
+            margin-left: 1.5vw;
+        }
+        
+        body {
+            overflow-x: none;
+            margin: 0 auto;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .row {
+                margin-left: 0vw;
+                height: auto;
+            }
+            #text-input,
+            #preview {
+                margin-top: 1vh;
+                margin-left: 4vw;
+                height: 44.5vh;
+            }
+        }
+    </style>
 </head>
-<!-- Markdown在线编辑 -->
 
 <body>
-    <div style="font-size: 20px;height: 30px; text-align: center;color: #009689; font-weight: bold;">Markdown文章在线编辑</div>
-    <div id="area">
-        <form action="" method="POST" style="width: auto;height: auto;"></form>
-        <table>
-            <tr>
-                <td><textarea name="" id="md-area" onkeyup=mdSwitch()></textarea></td>
-                <td>
-                    <div id="show-area" class="clearfix" name="txtcontext"></div>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td style="float: right;"><input type="submit" value="确定"></td>
-            </tr>
-        </table>
-        </form>
+    <h1 style="text-align: center;">cs</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <textarea class="bg-success" id="text-input" oninput="this.editor.update()" rows="6"></textarea>
+        </div>
+        <div class="col-md-6">
+            <div id="preview" class="bg-primary" rows="6" s> </div>
+        </div>
     </div>
+    <script src="https://cdn.bootcss.com/markdown.js/0.5.0/markdown.min.js"></script>
+    <script>
+        function Editor(input, preview) {
+            this.update = function() {
+                preview.innerHTML = markdown.toHTML(input.value);
+            };
+            input.editor = this;
+            this.update();
+        }
+        var $ = function(id) {
+            return document.getElementById(id);
+        };
+        new Editor($("text-input"), $("preview"));
+    </script>
+    <script type="text/javascript">
+        var div1 = document.getElementById("text-input");
+        var div2 = document.getElementById("preview");
+
+        function a() {
+            div2.onscroll = null;
+            div2.scrollTop = this.scrollTop;
+            div2.onscroll = b;
+        }
+
+        function b() {
+            div1.onscroll = null;
+            div1.onscrollTop = this.scrollTop;
+            div1.onscroll = a;
+        }
+        div1.onscroll = a;
+        div2.onscrollb = b;
+    </script>
 </body>
 
 </html>

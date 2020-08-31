@@ -5,8 +5,7 @@ const routes = [{
         path: '/',
         component: Home,
         meta: {
-            title: '首页',
-            requireAuth: true
+            title: '首页'
         }
     },
     {
