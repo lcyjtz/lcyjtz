@@ -8,108 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!--使用bootstrap的样式，比较好看-->
     <link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: '个性宅';
-            src: url('font/个性宅.ttf');
-        }
-        
-        @font-face {
-            font-family: '朝忆梨花暮忆雪';
-            src: url('font/朝忆梨花暮忆雪.ttf');
-        }
-        
-        h1 {
-            font-family: Consolas, monaco, monospace;
-            font-size: 23px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 23px;
-        }
-        
-        h3 {
-            font-family: Consolas, monaco, monospace;
-            font-size: 17px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 23px;
-        }
-        
-        p {
-            font-family: Consolas, monaco, monospace;
-            font-size: 14px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 23px;
-        }
-        
-        blockquote {
-            font-family: Consolas, monaco, monospace;
-            font-size: 17px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 23px;
-        }
-        
-        pre {
-            font-family: Consolas, monaco, monospace;
-            font-size: 12px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 23px;
-        }
-        
-        #text-input {
-            margin-left: 6%;
-            height: 90vh;
-            padding: 15px;
-            width: 96%;
-            border: none;
-            resize: none;
-        }
-        
-        #preview {
-            width: 96%;
-            padding: 15px;
-            border: none;
-            height: 90vh;
-            overflow-y: auto;
-            overflow-x: auto;
-        }
-        
-        .row {
-            width: 96vw;
-            height: 90vh;
-            margin-left: 1.5vw;
-        }
-        
-        body {
-            overflow-x: none;
-            margin: 0 auto;
-        }
-        
-        @media screen and (max-width: 1000px) {
-            .row {
-                margin-left: 0vw;
-                height: auto;
-            }
-            #text-input,
-            #preview {
-                margin-top: 1vh;
-                margin-left: 4vw;
-                height: 44.5vh;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/ArticelAdd.css" />
+    <link rel="shortcut icon" href="img/11111.ico" type="image/x-icon">
 </head>
 
 <body>
-    <h1 style="text-align: center;">cs</h1>
+    <div class="title">
+        <input class="textname"></input>
+        <input class="button" type="submit" value="确定">
+    </div>
     <div class="row">
         <div class="col-md-6">
             <textarea class="bg-success" id="text-input" oninput="this.editor.update()" rows="6"></textarea>
@@ -120,35 +27,8 @@
     </div>
     <script src="https://cdn.bootcss.com/markdown.js/0.5.0/markdown.min.js"></script>
     <script>
-        function Editor(input, preview) {
-            this.update = function() {
-                preview.innerHTML = markdown.toHTML(input.value);
-            };
-            input.editor = this;
-            this.update();
-        }
-        var $ = function(id) {
-            return document.getElementById(id);
-        };
-        new Editor($("text-input"), $("preview"));
     </script>
-    <script type="text/javascript">
-        var div1 = document.getElementById("text-input");
-        var div2 = document.getElementById("preview");
-
-        function a() {
-            div2.onscroll = null;
-            div2.scrollTop = this.scrollTop;
-            div2.onscroll = b;
-        }
-
-        function b() {
-            div1.onscroll = null;
-            div1.onscrollTop = this.scrollTop;
-            div1.onscroll = a;
-        }
-        div1.onscroll = a;
-        div2.onscrollb = b;
+    <script type="text/javascript" src="/lcyjtz/js/ArticleAdd.js">
     </script>
 </body>
 

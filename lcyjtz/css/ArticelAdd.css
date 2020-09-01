@@ -1,0 +1,123 @@
+@font-face {
+    font-family: '个性宅';
+    src: url('font/个性宅.ttf');
+}
+
+@font-face {
+    font-family: '朝忆梨花暮忆雪';
+    src: url('font/朝忆梨花暮忆雪.ttf');
+}
+
+h1 {
+    font-family: Consolas, monaco, monospace;
+    font-size: 23px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+h3 {
+    font-family: Consolas, monaco, monospace;
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+p {
+    font-family: Consolas, monaco, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+blockquote {
+    font-family: Consolas, monaco, monospace;
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+pre {
+    font-family: Consolas, monaco, monospace;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+#text-input {
+    margin-left: 6%;
+    height: 90vh;
+    padding: 15px;
+    width: 96%;
+    border: none;
+    resize: none;
+}
+
+#preview {
+    width: 96%;
+    padding: 15px;
+    border: none;
+    height: 90vh;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.row {
+    width: 96vw;
+    height: 90vh;
+    margin-left: 1.5vw;
+}
+
+body {
+    overflow-x: none;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 1vh 0 1vh 5vw
+}
+
+.textname {
+    width: 20vw;
+    height: 3vh;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+.button {
+    width: 5vw;
+    height: 3vh;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        margin-left: 0vw;
+        height: auto;
+    }
+    #text-input,
+    #preview {
+        margin-top: 1vh;
+        margin-left: 4vw;
+        height: 44.5vh;
+    }
+    .title {
+        text-align: center;
+    }
+    .textname {
+        width: 40vw;
+    }
+    .button {
+        width: 10vw;
+        size: 10px;
+    }
+}
