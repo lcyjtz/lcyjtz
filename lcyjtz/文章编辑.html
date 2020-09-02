@@ -3,28 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MarkDown</title>
-    <!--适配手机-->
+    <title>MarkDown编辑器</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!--使用bootstrap的样式，比较好看-->
     <link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/ArticelAdd.css" />
     <link rel="shortcut icon" href="img/11111.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="title">
-        <input class="textname"></input>
-        <input class="button" type="submit" value="确定">
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <textarea class="bg-success" id="text-input" oninput="this.editor.update()" rows="6"></textarea>
+    <form action="#" method="POST">
+        <div class="title">
+            <input class="textname" name="textname"></input>
+            <input class="button" type="submit" value="确定">
         </div>
-        <div class="col-md-6">
-            <div id="preview" class="bg-primary" rows="6" s> </div>
+        <div class="row">
+            <div class="col-md-6">
+                <textarea class="bg-success" id="text-input" oninput="this.editor.update()" rows="6"></textarea>
+            </div>
+            <div class="col-md-6">
+                <div id="preview" class="bg-primary" rows="6" name="Content"> </div>
+            </div>
         </div>
-    </div>
+    </form>
     <script src="https://cdn.bootcss.com/markdown.js/0.5.0/markdown.min.js"></script>
     <script>
     </script>
