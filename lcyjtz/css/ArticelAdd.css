@@ -1,3 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+canvas#canvas {
+    display: block;
+    background: #360033;
+    position: absolute;
+    z-index: -3;
+    background: -webkit-linear-gradient(to bottom, #0b8793, #360033);
+    background: linear-gradient(to bottom, #0b8793, #360033);
+}
+
 @font-face {
     font-family: '个性宅';
     src: url('font/个性宅.ttf');
@@ -6,6 +20,11 @@
 @font-face {
     font-family: '朝忆梨花暮忆雪';
     src: url('font/朝忆梨花暮忆雪.ttf');
+}
+
+form {
+    position: absolute;
+    z-index: 7;
 }
 
 h1 {
@@ -53,22 +72,12 @@ pre {
     line-height: 23px;
 }
 
-#text-input {
-    margin-left: 6%;
-    height: 90vh;
-    padding: 15px;
-    width: 96%;
-    border: none;
-    resize: none;
-}
-
 #preview {
     width: 96%;
     padding: 15px;
     border: none;
     height: 90vh;
     overflow-y: auto;
-    overflow-x: auto;
 }
 
 .row {
@@ -87,6 +96,7 @@ body {
 }
 
 .textname {
+    background: rgba(130, 130, 130, 0.7);
     width: 20vw;
     height: 3vh;
     margin-right: 1vw;
@@ -97,6 +107,57 @@ body {
     width: 5vw;
     height: 3vh;
     vertical-align: middle;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+#text-input {
+    margin-left: 6%;
+    height: 90vh;
+    padding: 15px;
+    width: 96%;
+    border: none;
+    outline: none;
+    color: rgb(254, 255, 188);
+    font-size: 15px;
+    background: rgba(130, 130, 130, 0.7)
+}
+
+#text-input::-webkit-scrollbar {
+    width: 4px;
+    /*height: 4px;*/
+}
+
+#text-input::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#text-input::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#preview::-webkit-scrollbar {
+    width: 4px;
+    /*height: 4px;*/
+}
+
+#preview::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#preview::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 1000px) {
