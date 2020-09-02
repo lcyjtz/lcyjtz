@@ -128,7 +128,6 @@ input {
 
 #text-input::-webkit-scrollbar {
     width: 4px;
-    /*height: 4px;*/
 }
 
 #text-input::-webkit-scrollbar-thumb {
@@ -145,7 +144,6 @@ input {
 
 #preview::-webkit-scrollbar {
     width: 4px;
-    /*height: 4px;*/
 }
 
 #preview::-webkit-scrollbar-thumb {
