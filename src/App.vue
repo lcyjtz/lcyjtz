@@ -1,15 +1,12 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div id="top-background"></div>
+    <router-view />
   </div>
 </template>
 <style lang="less">
-* {
-    margin: 0 auto;
-}
 
-body html {
-    width: 100%;
-    height: auto;
-}
 </style>
+<script>
+
+</script>
