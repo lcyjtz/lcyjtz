@@ -1,5 +1,6 @@
 <template>
-    <div>11111</div>
+    <div>22222</div>
+
 </template>
 <style scoped lang="less">
 

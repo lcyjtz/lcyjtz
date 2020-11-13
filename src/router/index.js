@@ -11,7 +11,7 @@ const routes = [{
     {
         path: '/about',
         name: 'About',
-        component: () =>
+        component: () => 
             import ('../views/ArticleEditor.vue')
     }
 ]
